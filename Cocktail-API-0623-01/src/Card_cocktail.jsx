@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from 'react';
-import { Card,CardBody, CardFooter, Stack, Heading, Divider, ButtonGroup, Button, Image, Text, ListItem} from '@chakra-ui/react'
+import { Card,CardBody, CardFooter, Stack, Heading, Divider, ButtonGroup, Image, Text, ListItem} from '@chakra-ui/react'
 import ModalCocktail from "./Modal-window";
 
 
