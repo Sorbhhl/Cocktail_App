@@ -6,8 +6,13 @@ function ModalCocktail(props){
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <>
-        <Button onClick={onOpen} variant='ghost' colorScheme='green'>Make it at home!</Button>
-    
+        <Button
+        rounded={'full'}
+        bg={'green.400'}
+        color={'white'}
+        _hover={{bg: 'green.500'}}
+        _focus={{bg: 'green.500',}}
+        onClick={onOpen} variant='ghost'>Make it at home!</Button>
         <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
             <ModalContent maxW="800px">

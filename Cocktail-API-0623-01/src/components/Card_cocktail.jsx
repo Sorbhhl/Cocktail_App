@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from 'react';
-import { Card,CardBody, CardFooter, Stack, Heading, Divider, ButtonGroup, Image, Text, ListItem} from '@chakra-ui/react'
+import { Card,CardBody, CardFooter, Stack, Heading, Divider, ButtonGroup, Image, Text, ListItem, useColorModeValue} from '@chakra-ui/react'
 import ModalCocktail from "./Modal-window";
 
 
@@ -23,7 +23,8 @@ function Card_cocktail(props){
 
     return (
         <div>
-            <Card maxW={280} borderRadius={20} key={cocktail.idDrink} margin="auto">
+            <Card maxW={280} borderRadius={20} key={cocktail.idDrink} margin="auto" boxShadow={'xl'}
+            bg={useColorModeValue('orange.100', 'blue.900')}>
             <CardBody>
                 <Image w="100%" borderRadius={10} src={cocktail.strDrinkThumb}/>
                 <Stack mt='md' spacing='3'>

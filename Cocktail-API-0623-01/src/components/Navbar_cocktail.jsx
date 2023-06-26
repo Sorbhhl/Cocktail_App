@@ -1,5 +1,4 @@
 import React from "react";
-
 import {Box,Flex, Button, useColorModeValue, useColorMode,Stack} from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
   
@@ -12,9 +11,9 @@ function Nav() {
 
   return (
       <>
-      <Box bg={useColorModeValue('orange.200', 'orange.900')} px={4}>
+      <Box bg={useColorModeValue('orange.100', 'blue.900')} position="fixed" top={0} left={0} right={0} zIndex={10} boxShadow="md">
           <Flex h={16} alignItems={'center'} justifyContent={'right'}>
-              <Stack direction={'row'} spacing={7}>
+              <Stack direction={'row'}>
                   <Button onClick={handleColorModeChange}>
                       {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
                   </Button>
