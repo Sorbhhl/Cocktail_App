@@ -1,17 +1,10 @@
 import React from "react";
-import { useState, useEffect } from 'react';
 import { Card,CardBody, CardFooter, Stack, Heading, Divider, ButtonGroup, Image, Text, ListItem, useColorModeValue} from '@chakra-ui/react'
 import ModalCocktail from "./Modal-window";
 
 
-function Card_cocktail(props){
-    const [cocktail, setCocktail] = useState([])
-    useEffect(() => {
-    fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
-    .then((response) => response.json())
-    .then((cocktail) => {console.log(cocktail);setCocktail(cocktail.drinks[0])})
-    }, [props.data])
-
+function Card_cocktail({cocktail}){
+    
     const cocktailIng = [];
     let i = 1;
     while (cocktail[`strIngredient${i}`] != null) {
