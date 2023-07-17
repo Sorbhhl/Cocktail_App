@@ -9,7 +9,7 @@ function Container_cards_cocktails() {
   useEffect(() => {
   fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
   .then((response) => response.json())
-  .then((data) => {console.log(data);setCocktail(data.drinks[0])})
+  .then((data) => {console.log(data);setCocktail(data)})
   }, [])
 
   //Random cocktails
@@ -46,7 +46,9 @@ function Container_cards_cocktails() {
         </form>
         <SimpleGrid minChildWidth='280px' spacing='60px'
         justifyContent={"center"} alignContent={"center"} paddingX='10px'>
-            <Card_cocktail cocktail={cocktail}/>
+          {cocktail?.map((drink) => (
+            <Card_cocktail key={drink.idDrink} cocktail={drink} />
+          ))}
         </SimpleGrid>
       </Box>
     </>
