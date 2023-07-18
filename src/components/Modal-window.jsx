@@ -15,11 +15,14 @@ function ModalCocktail(props){
         onClick={onOpen} variant='ghost'>Make it at home!</Button>
         <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
-            <ModalContent maxW="800px" paddingX={6} paddingY={4}>
+            <ModalContent maxW="800px" paddingY={4}
+            paddingX={{ base: 1, md: 6}}
+            marginX={{ base: 4, md: 0}}
+            >
             <ModalHeader>{props.title}</ModalHeader>
             <ModalCloseButton />
             <ModalBody paddingX={10} marginBottom={10}>
-            <Flex gap="20px">
+            <Flex gap="20px" alignItems="space-between" direction={{ base: "column", md: "row" }}>
                 <Box>
                     <Heading size='md'>Ingredients:</Heading>
                     <UnorderedList>
@@ -28,7 +31,7 @@ function ModalCocktail(props){
                     <Heading size='md' marginTop={6}>Steps:</Heading>
                     <Text>{props.strInstructions}</Text>
                 </Box>
-                <Box w={500}>
+                <Box maxW="240px">
                     <Image w='100%' borderRadius={10} src={props.strDrinkThumb}/>
                     <Text fontSize='xs' m={0}>{props.strAlcoholic}</Text> 
                     <Text fontSize='sm'>{props.strCategory}</Text> 
