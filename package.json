@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://sorbhhl.github.io/Cocktail_App/",
   "scripts": {
-    "deploy": "npm run build ; gh-pages -d dist",
+    "deploy": "vite build && gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
