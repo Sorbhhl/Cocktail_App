@@ -1,5 +1,7 @@
 import React from "react";
 import {Image, Box, Flex, Heading, Text,useColorModeValue} from '@chakra-ui/react'
+import myImageLight from './src/assets/adam-jaime-dmkmrNptMpw-unsplash(opt).jpg';
+import myImageDark from './src/assets/mae-mu-YNMjGIPgD_c-unsplash(opt).jpg';
 
 function Header_Cocktail(){
     return (
@@ -12,7 +14,7 @@ function Header_Cocktail(){
         >
             <Box order={{ base: 2, md: 1 }}>
             <Image src=
-            {useColorModeValue("./src/assets/adam-jaime-dmkmrNptMpw-unsplash(opt).jpg", "./src/assets/mae-mu-YNMjGIPgD_c-unsplash(opt).jpg")}
+            {useColorModeValue(myImageLight, myImageDark)}
             />
             </Box>
             <Box flex={1} justifyContent={'right'} alignItems={"right"} order={{ base: 1, md: 2 }}
