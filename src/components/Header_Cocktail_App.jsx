@@ -1,7 +1,7 @@
 import React from "react";
 import {Image, Box, Flex, Heading, Text,useColorModeValue} from '@chakra-ui/react'
-import myImageLight from './src/assets/adam-jaime-dmkmrNptMpw-unsplash(opt).jpg';
-import myImageDark from './src/assets/mae-mu-YNMjGIPgD_c-unsplash(opt).jpg';
+import myImageLight from '../assets/adam-jaime-dmkmrNptMpw-unsplash(opt).jpg';
+import myImageDark from '../assets/mae-mu-YNMjGIPgD_c-unsplash(opt).jpg'
 
 function Header_Cocktail(){
     return (
