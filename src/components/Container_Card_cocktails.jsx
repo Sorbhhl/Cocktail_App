@@ -1,5 +1,5 @@
 import {React, useState, useEffect} from 'react';
-import {SimpleGrid, Button, useColorModeValue, Box, Input, Text, Flex, Divider, AbsoluteCenter} from '@chakra-ui/react'
+import {SimpleGrid, Button, useColorModeValue, Box, Input, Text, Flex, Divider} from '@chakra-ui/react'
 import {Search2Icon} from '@chakra-ui/icons'
 import Card_cocktail from './Card_cocktail.jsx'
 
@@ -68,7 +68,7 @@ function Container_cards_cocktails() {
 
   return (
     <>
-      <Box bg={useColorModeValue('orange.50', 'blue.800')}>
+      <Box bg={useColorModeValue('white', 'blue.800')} py={6}>
         <Flex direction={{ base: "column", md: "row" }} alignItems={"center"} justifyContent={"center"} gap='30' p={4}>
           <Box textAlign={"center"}>
             <Text>Look for specific cocktails:</Text>
@@ -81,7 +81,7 @@ function Container_cards_cocktails() {
           </Box>
           <Box textAlign={"center"}>
             <Text>Look for random cocktails:</Text>
-            <Button variant='solid' colorScheme='green' onClick={getRandomCocktail}>Random!</Button>
+            <Button variant='solid' colorScheme={useColorModeValue('green', 'blue')} onClick={getRandomCocktail}>Random!</Button>
           </Box>
         </Flex>
         <Divider orientation='horizontal'></Divider>

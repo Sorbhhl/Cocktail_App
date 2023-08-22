@@ -17,7 +17,7 @@ function Card_cocktail({cocktail}){
     return (
         <div>
             <Card maxW={280} borderRadius={20} key={cocktail.idDrink} margin="auto" boxShadow={'xl'}
-            bg={useColorModeValue('orange.100', 'blue.900')}>
+            bg={useColorModeValue('gray.100', 'blue.900')}>
             <CardBody>
                 <Image w="100%" borderRadius={10} src={cocktail.strDrinkThumb}/>
                 <Stack mt='md' spacing='3'>
