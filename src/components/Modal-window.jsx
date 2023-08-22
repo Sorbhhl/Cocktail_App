@@ -1,5 +1,5 @@
 import React from "react";
-import {Modal,ModalOverlay,ModalContent,ModalHeader,ModalBody, useColorModeValue,
+import {Modal,ModalOverlay,ModalContent,ModalHeader,ModalBody,
     ModalCloseButton, useDisclosure, Button, Text, Flex, Box, Image, Heading, UnorderedList} from '@chakra-ui/react'
 
 function ModalCocktail(props){
@@ -7,11 +7,11 @@ function ModalCocktail(props){
     return (
         <>
         <Button
-        rounded={'xl'}
-        bg={useColorModeValue('green.500', 'blue.200')}
-        color={useColorModeValue('white', 'blue.900')}
-        _hover={{bg:useColorModeValue('green.600', 'blue.300')}}
-        _focus={{bg:useColorModeValue('green.600', 'blue.300')}}
+        rounded={'full'}
+        bg={'green.400'}
+        color={'white'}
+        _hover={{bg: 'green.500'}}
+        _focus={{bg: 'green.500',}}
         onClick={onOpen} variant='ghost'>Make it at home!</Button>
         <Modal isOpen={isOpen} onClose={onClose}>
             <ModalOverlay />
